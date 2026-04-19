@@ -1,0 +1,1226 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Siderius Heftrucks | Verkoop, Verhuur, Service & Onderhoud</title>
+<meta name="description" content="Siderius Heftrucks – al sinds 1945 uw betrouwbare partner voor heftrucks, reach trucks en interne transportmiddelen. Verkoop, verhuur, service en onderdelen. Clark & Hyundai officieel dealer.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:#fff;color:#1a2332;overflow-x:hidden}
+::-webkit-scrollbar{width:5px}
+::-webkit-scrollbar-track{background:#f0f0f0}
+::-webkit-scrollbar-thumb{background:#1E9FD9;border-radius:3px}
+
+/* ─── VARIABLES ─── */
+:root{
+  --blue:#1E9FD9;
+  --blue-dark:#1670A8;
+  --blue-light:#4DB8E8;
+  --navy:#1a2332;
+  --navy-light:#243045;
+  --text:#1a2332;
+  --text-muted:#5a6a7a;
+  --bg:#f5f7fa;
+  --white:#fff;
+}
+
+/* ─── TOP BAR ─── */
+#topbar{
+  background:#1670A8;
+  color:#fff;
+  font-size:13px;
+  padding:9px 60px;
+  display:flex;align-items:center;justify-content:space-between;
+}
+.topbar-left{display:flex;gap:28px;align-items:center}
+.topbar-left a{
+  color:rgba(255,255,255,.85);text-decoration:none;
+  display:flex;align-items:center;gap:7px;transition:.2s;font-weight:500;
+}
+.topbar-left a:hover{color:#fff}
+.topbar-left svg{width:14px;height:14px;fill:currentColor;flex-shrink:0}
+.topbar-right{font-size:12px;color:rgba(255,255,255,.55);font-weight:500;letter-spacing:.3px}
+
+/* ─── NAV ─── */
+nav{
+  position:sticky;top:0;z-index:1000;
+  background:var(--navy);
+  padding:0 60px;
+  display:flex;align-items:center;justify-content:space-between;
+  height:76px;
+  box-shadow:0 2px 24px rgba(0,0,0,.3);
+}
+.nav-logo{display:flex;align-items:center;gap:14px;text-decoration:none}
+/* Siderius S-logo (blauw octagon met witte S) */
+.nav-logo-mark{
+  width:48px;height:48px;flex-shrink:0;
+}
+.nav-logo-text{line-height:1.2}
+.nav-logo-name{font-size:18px;font-weight:800;color:#fff;letter-spacing:-.3px}
+.nav-logo-sub{font-size:10.5px;color:rgba(255,255,255,.5);font-weight:500;letter-spacing:1.2px;text-transform:uppercase}
+
+.nav-links{display:flex;align-items:center;gap:2px;list-style:none}
+.nav-links>li{position:relative}
+.nav-links>li>a{
+  display:block;padding:10px 14px;
+  color:rgba(255,255,255,.8);
+  text-decoration:none;font-size:14px;font-weight:500;
+  border-radius:8px;transition:.2s;white-space:nowrap;
+}
+.nav-links>li>a:hover{color:#fff;background:rgba(255,255,255,.07)}
+.nav-links>li.has-drop:hover>.dropdown{display:block}
+.dropdown{
+  display:none;position:absolute;top:calc(100% + 4px);left:0;
+  background:var(--navy);border:1px solid rgba(255,255,255,.08);
+  border-radius:12px;padding:8px;min-width:200px;
+  box-shadow:0 12px 40px rgba(0,0,0,.4);
+}
+.dropdown a{display:block;padding:10px 14px;color:rgba(255,255,255,.75);text-decoration:none;font-size:13px;border-radius:8px;transition:.15s}
+.dropdown a:hover{color:#fff;background:rgba(255,255,255,.07)}
+.nav-cta{
+  background:var(--blue) !important;
+  color:#fff !important;padding:10px 22px !important;
+  border-radius:9px !important;font-weight:700 !important;
+  box-shadow:0 4px 16px rgba(30,159,217,.4);
+  transition:all .25s !important;
+}
+.nav-cta:hover{background:var(--blue-dark) !important;transform:translateY(-1px) !important}
+.nav-right{display:flex;align-items:center;gap:16px}
+.nav-phone{
+  display:flex;align-items:center;gap:8px;
+  color:rgba(255,255,255,.8);text-decoration:none;font-size:14px;font-weight:600;
+  transition:.2s;
+}
+.nav-phone:hover{color:#fff}
+.nav-phone svg{width:15px;height:15px;fill:currentColor}
+
+/* ─── HERO ─── */
+#hero{
+  position:relative;height:100vh;min-height:680px;
+  background:var(--navy);
+  display:flex;align-items:center;overflow:hidden;
+}
+.hero-bg{
+  position:absolute;inset:0;
+  background-image:url('https://sideriusheftrucks.nl/wp-content/uploads/2024/07/Opening-Siderius62-min-1-scaled.jpg');
+  background-size:cover;background-position:center;
+  filter:brightness(.45);
+  transition:transform 8s ease;
+}
+#hero:hover .hero-bg{transform:scale(1.03)}
+.hero-overlay{
+  position:absolute;inset:0;
+  background:linear-gradient(105deg,rgba(26,35,50,.93) 45%,rgba(26,35,50,.35) 100%);
+}
+.hero-content{
+  position:relative;z-index:5;
+  padding:0 80px;max-width:720px;
+}
+.hero-eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  background:rgba(30,159,217,.18);border:1px solid rgba(30,159,217,.35);
+  border-radius:100px;padding:6px 16px;
+  font-size:12px;font-weight:700;color:#5CC8F0;
+  letter-spacing:.5px;text-transform:uppercase;margin-bottom:26px;
+}
+.hero-eyebrow::before{content:'';width:6px;height:6px;background:var(--blue);border-radius:50%;animation:blink 2s infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.25}}
+.hero-title{
+  font-size:clamp(42px,6.5vw,84px);
+  font-weight:900;line-height:.96;
+  color:#fff;letter-spacing:-2px;margin-bottom:24px;
+}
+.hero-title em{
+  font-style:normal;
+  -webkit-text-stroke:2px var(--blue);
+  color:transparent;
+}
+.hero-desc{font-size:17px;line-height:1.75;color:rgba(255,255,255,.65);max-width:490px;margin-bottom:40px}
+.hero-btns{display:flex;gap:14px;flex-wrap:wrap}
+.btn-blue{
+  display:inline-flex;align-items:center;gap:10px;
+  background:var(--blue);
+  color:#fff;text-decoration:none;font-weight:700;font-size:15px;
+  padding:15px 30px;border-radius:12px;
+  box-shadow:0 8px 28px rgba(30,159,217,.45);
+  transition:all .3s;
+}
+.btn-blue:hover{background:var(--blue-dark);transform:translateY(-3px);box-shadow:0 14px 36px rgba(30,159,217,.55)}
+.btn-blue svg{width:18px;height:18px;fill:currentColor}
+.btn-outline{
+  display:inline-flex;align-items:center;gap:10px;
+  border:2px solid rgba(255,255,255,.22);
+  color:#fff;text-decoration:none;font-weight:600;font-size:15px;
+  padding:13px 28px;border-radius:12px;
+  backdrop-filter:blur(8px);transition:all .3s;
+}
+.btn-outline:hover{border-color:rgba(255,255,255,.5);background:rgba(255,255,255,.06)}
+.hero-scroll{
+  position:absolute;bottom:32px;left:50%;transform:translateX(-50%);
+  z-index:5;display:flex;flex-direction:column;align-items:center;gap:8px;
+  color:rgba(255,255,255,.4);font-size:11px;letter-spacing:2px;text-transform:uppercase;
+}
+.scroll-dot{width:6px;height:6px;background:rgba(255,255,255,.3);border-radius:50%;animation:scrollBounce 1.8s infinite}
+@keyframes scrollBounce{0%,100%{transform:translateY(0)}50%{transform:translateY(6px)}}
+
+/* ─── STATS ─── */
+#stats{background:var(--blue);padding:56px 60px}
+.stats-row{
+  display:flex;justify-content:space-around;align-items:center;
+  max-width:1100px;margin:0 auto;flex-wrap:wrap;gap:30px;
+}
+.stat-item{text-align:center}
+.stat-num{font-size:52px;font-weight:900;color:#fff;line-height:1;letter-spacing:-2px}
+.stat-unit{font-size:28px;font-weight:900;color:rgba(255,255,255,.6)}
+.stat-lbl{font-size:13px;color:rgba(255,255,255,.8);font-weight:600;letter-spacing:.5px;margin-top:5px;text-transform:uppercase}
+.stat-divider{width:1px;height:60px;background:rgba(255,255,255,.2)}
+
+/* ─── SECTION GENERIC ─── */
+.section{padding:90px 60px}
+.section-inner{max-width:1220px;margin:0 auto}
+.section-tag{font-size:11px;font-weight:700;letter-spacing:3.5px;text-transform:uppercase;color:var(--blue);margin-bottom:12px}
+.section-heading{font-size:clamp(30px,4vw,50px);font-weight:900;color:var(--navy);line-height:1.06;letter-spacing:-1.5px;margin-bottom:18px}
+.section-heading span{color:var(--blue)}
+.section-sub{font-size:16px;line-height:1.75;color:var(--text-muted);max-width:560px}
+
+/* ─── DIENSTEN ─── */
+#diensten{background:var(--bg)}
+.diensten-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:52px;
+}
+.dienst-card{
+  background:#fff;border-radius:20px;overflow:hidden;
+  box-shadow:0 2px 20px rgba(0,0,0,.05);
+  transition:all .35s;cursor:pointer;
+  border:1px solid #eef0f5;text-decoration:none;color:inherit;
+  display:flex;flex-direction:column;
+}
+.dienst-card:hover{transform:translateY(-8px);box-shadow:0 18px 50px rgba(30,159,217,.12)}
+.dienst-card-img{
+  height:210px;overflow:hidden;position:relative;
+}
+.dienst-card-img img{
+  width:100%;height:100%;object-fit:cover;
+  transition:transform .5s;
+}
+.dienst-card:hover .dienst-card-img img{transform:scale(1.06)}
+.dienst-card-img-icon{
+  position:absolute;inset:0;
+  background:linear-gradient(145deg,var(--navy),var(--navy-light));
+  display:flex;align-items:center;justify-content:center;
+}
+.dienst-card-img-icon svg{width:72px;height:72px;fill:rgba(255,255,255,.12);transition:.4s}
+.dienst-card:hover .dienst-card-img-icon svg{fill:rgba(30,159,217,.35);transform:scale(1.1)}
+.dienst-card-stripe{
+  position:absolute;bottom:0;left:0;right:0;height:4px;
+  background:linear-gradient(90deg,var(--blue),var(--blue-light));
+  transform:scaleX(0);transform-origin:left;transition:.4s;
+}
+.dienst-card:hover .dienst-card-stripe{transform:scaleX(1)}
+.dienst-card-body{padding:28px 28px 32px;flex:1;display:flex;flex-direction:column}
+.dienst-card-body h3{font-size:19px;font-weight:800;color:var(--navy);margin-bottom:10px}
+.dienst-card-body p{font-size:14px;line-height:1.7;color:#6a7a8a;margin-bottom:22px;flex:1}
+.dienst-link{
+  display:inline-flex;align-items:center;gap:6px;
+  color:var(--blue);font-weight:700;font-size:14px;text-decoration:none;
+  transition:gap .2s;margin-top:auto;
+}
+.dienst-link:hover{gap:10px}
+.dienst-link svg{width:16px;height:16px;fill:currentColor}
+
+/* ─── ABOUT / DNA ─── */
+#about{background:#fff}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.about-visual{position:relative}
+.about-img-main{
+  border-radius:24px;overflow:hidden;
+  aspect-ratio:4/3;
+  position:relative;
+  box-shadow:20px 20px 0 #eef3f8,-10px -10px 0 var(--blue);
+}
+.about-img-main img{width:100%;height:100%;object-fit:cover}
+.about-badge{
+  position:absolute;
+  background:var(--blue);color:#fff;
+  border-radius:16px;padding:14px 22px;
+  font-weight:800;font-size:15px;
+  box-shadow:0 8px 24px rgba(30,159,217,.4);
+  animation:floatY 3.5s ease-in-out infinite;
+  white-space:nowrap;
+}
+@keyframes floatY{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+.about-badge-1{top:-22px;right:-22px;font-size:14px}
+.about-badge-2{bottom:22px;left:-28px;animation-delay:1.8s;font-size:13px}
+.about-badge-2 small{display:block;font-size:11px;font-weight:500;opacity:.8}
+.about-facts{margin-top:32px;display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.about-fact{
+  background:var(--bg);border-radius:14px;padding:20px 22px;
+  border-left:4px solid var(--blue);
+}
+.about-fact-num{font-size:30px;font-weight:900;color:var(--navy);letter-spacing:-1px}
+.about-fact-lbl{font-size:13px;color:var(--text-muted);font-weight:500;margin-top:4px}
+.about-text h2{font-size:clamp(28px,3.5vw,46px);font-weight:900;color:var(--navy);line-height:1.08;letter-spacing:-1.5px;margin-bottom:20px}
+.about-text h2 span{color:var(--blue)}
+.about-text p{font-size:15px;line-height:1.8;color:var(--text-muted);margin-bottom:16px}
+.about-text p:last-of-type{margin-bottom:28px}
+.cert-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:28px}
+.cert-pill{
+  display:flex;align-items:center;gap:7px;
+  background:var(--bg);border-radius:100px;padding:8px 16px;
+  font-size:13px;font-weight:600;color:var(--navy);
+  border:1px solid #eaedf2;
+}
+.cert-pill .dot{width:7px;height:7px;background:var(--blue);border-radius:50%}
+.timeline{margin-top:32px;display:flex;flex-direction:column;gap:16px}
+.tl-item{display:flex;gap:16px;align-items:flex-start}
+.tl-year{
+  font-size:13px;font-weight:700;color:var(--blue);
+  min-width:46px;padding-top:2px;
+}
+.tl-dot{
+  width:10px;height:10px;border-radius:50%;background:var(--blue);
+  flex-shrink:0;margin-top:4px;
+}
+.tl-text{font-size:14px;line-height:1.6;color:var(--text-muted)}
+
+/* ─── MERKEN ─── */
+#merken{background:var(--bg);padding:70px 60px}
+.merken-inner{max-width:1100px;margin:0 auto}
+.merken-heading{text-align:center;margin-bottom:50px}
+.merken-heading p{font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--blue);margin-bottom:12px}
+.merken-heading h2{font-size:clamp(26px,3.5vw,40px);font-weight:900;color:var(--navy);letter-spacing:-1px}
+.merken-grid{
+  display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:16px;
+}
+.merk-card{
+  background:#fff;border-radius:14px;
+  padding:22px 36px;
+  border:1px solid #eaedf2;
+  font-size:18px;font-weight:800;color:var(--navy);
+  letter-spacing:-.5px;
+  transition:all .25s;cursor:default;
+  box-shadow:0 2px 12px rgba(0,0,0,.04);
+  min-width:130px;text-align:center;
+}
+.merk-card:hover{border-color:var(--blue);color:var(--blue);box-shadow:0 6px 24px rgba(30,159,217,.12);transform:translateY(-3px)}
+.merk-official{
+  display:inline-block;
+  margin-top:8px;font-size:10px;font-weight:600;
+  color:var(--blue);background:rgba(30,159,217,.1);
+  border-radius:100px;padding:3px 10px;letter-spacing:.5px;text-transform:uppercase;
+}
+
+/* ─── VESTIGINGEN ─── */
+#vestigingen{background:#fff;padding:90px 60px}
+.vest-inner{max-width:1220px;margin:0 auto}
+.vest-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:52px}
+.vest-card{
+  border-radius:20px;overflow:hidden;
+  border:1px solid #eaedf2;
+  transition:all .3s;
+  background:#fff;
+  box-shadow:0 2px 16px rgba(0,0,0,.05);
+}
+.vest-card:hover{transform:translateY(-6px);box-shadow:0 16px 40px rgba(30,159,217,.1);border-color:rgba(30,159,217,.25)}
+.vest-card-header{
+  background:linear-gradient(135deg,var(--navy),var(--navy-light));
+  padding:30px 28px;position:relative;overflow:hidden;
+}
+.vest-card-header::after{
+  content:'';position:absolute;top:-30px;right:-30px;
+  width:100px;height:100px;border-radius:50%;
+  background:rgba(30,159,217,.12);
+}
+.vest-hq-badge{
+  display:inline-block;margin-bottom:10px;
+  font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;
+  color:var(--blue);background:rgba(30,159,217,.15);
+  border-radius:100px;padding:4px 12px;
+}
+.vest-card-header h3{font-size:22px;font-weight:800;color:#fff;margin-bottom:6px}
+.vest-card-header p{font-size:13px;color:rgba(255,255,255,.55);font-weight:500}
+.vest-card-body{padding:26px 28px}
+.vest-info{display:flex;flex-direction:column;gap:12px}
+.vest-info-row{display:flex;gap:12px;align-items:flex-start}
+.vest-info-row svg{width:16px;height:16px;fill:var(--blue);flex-shrink:0;margin-top:2px}
+.vest-info-row span{font-size:14px;color:var(--text-muted);line-height:1.5}
+.vest-info-row strong{color:var(--navy);font-weight:600}
+
+/* ─── CONTACT CTA ─── */
+#contact-cta{
+  background:linear-gradient(135deg,var(--navy) 0%,var(--navy-light) 100%);
+  padding:90px 60px;position:relative;overflow:hidden;
+}
+#contact-cta::before{
+  content:'';position:absolute;top:-100px;right:-100px;
+  width:400px;height:400px;border-radius:50%;
+  background:rgba(30,159,217,.1);
+}
+#contact-cta::after{
+  content:'';position:absolute;bottom:-80px;left:-60px;
+  width:250px;height:250px;border-radius:50%;
+  background:rgba(30,159,217,.07);
+}
+.cta-inner{
+  max-width:1100px;margin:0 auto;
+  display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;
+  position:relative;z-index:1;
+}
+.cta-left h2{font-size:clamp(30px,4vw,48px);font-weight:900;color:#fff;letter-spacing:-1.5px;margin-bottom:16px;line-height:1.08}
+.cta-left h2 span{color:var(--blue-light)}
+.cta-left p{font-size:16px;line-height:1.75;color:rgba(255,255,255,.6);margin-bottom:32px}
+.cta-contacts{display:flex;flex-direction:column;gap:16px;margin-bottom:32px}
+.cta-contact-row{
+  display:flex;align-items:center;gap:14px;
+  background:rgba(255,255,255,.06);border-radius:14px;padding:16px 20px;
+  border:1px solid rgba(255,255,255,.08);
+}
+.cta-contact-icon{
+  width:42px;height:42px;border-radius:10px;background:var(--blue);
+  display:flex;align-items:center;justify-content:center;flex-shrink:0;
+}
+.cta-contact-icon svg{width:18px;height:18px;fill:#fff}
+.cta-contact-info{display:flex;flex-direction:column}
+.cta-contact-label{font-size:11px;font-weight:700;color:rgba(255,255,255,.4);letter-spacing:.5px;text-transform:uppercase;margin-bottom:3px}
+.cta-contact-val{font-size:15px;font-weight:600;color:#fff;text-decoration:none}
+.cta-contact-val:hover{color:var(--blue-light)}
+.cta-right{display:flex;flex-direction:column;gap:16px}
+.contact-dept{
+  background:rgba(255,255,255,.05);border-radius:16px;padding:22px 24px;
+  border:1px solid rgba(255,255,255,.08);
+  transition:.25s;
+}
+.contact-dept:hover{background:rgba(255,255,255,.08);border-color:rgba(30,159,217,.25)}
+.contact-dept-name{font-size:13px;font-weight:700;color:rgba(255,255,255,.5);letter-spacing:.5px;text-transform:uppercase;margin-bottom:6px}
+.contact-dept-person{font-size:15px;font-weight:700;color:#fff;margin-bottom:4px}
+.contact-dept-links{display:flex;gap:16px;flex-wrap:wrap}
+.contact-dept-links a{font-size:13px;color:var(--blue-light);text-decoration:none;font-weight:500;transition:.2s}
+.contact-dept-links a:hover{color:#fff}
+
+/* ─── SERVICE CALLOUT ─── */
+#service-strip{
+  background:var(--blue);padding:52px 60px;
+}
+.service-strip-inner{
+  max-width:1100px;margin:0 auto;
+  display:flex;align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap;
+}
+.service-strip-text h3{font-size:26px;font-weight:800;color:#fff;letter-spacing:-.5px;margin-bottom:8px}
+.service-strip-text p{font-size:15px;color:rgba(255,255,255,.75);max-width:480px;line-height:1.6}
+.btn-white{
+  display:inline-flex;align-items:center;gap:10px;
+  background:#fff;color:var(--blue);
+  text-decoration:none;font-weight:700;font-size:15px;
+  padding:15px 30px;border-radius:12px;
+  box-shadow:0 8px 28px rgba(0,0,0,.2);
+  transition:all .3s;white-space:nowrap;
+}
+.btn-white:hover{transform:translateY(-3px);box-shadow:0 14px 36px rgba(0,0,0,.25);color:var(--blue-dark)}
+
+/* ─── NIEUWS ─── */
+#nieuws{background:var(--bg);padding:90px 60px}
+.nieuws-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:52px}
+.nieuws-card{
+  background:#fff;border-radius:18px;overflow:hidden;
+  border:1px solid #eaedf2;box-shadow:0 2px 14px rgba(0,0,0,.04);
+  transition:all .3s;text-decoration:none;color:inherit;display:flex;flex-direction:column;
+}
+.nieuws-card:hover{transform:translateY(-6px);box-shadow:0 16px 40px rgba(30,159,217,.1)}
+.nieuws-card-img{
+  height:190px;overflow:hidden;position:relative;
+  background:linear-gradient(135deg,var(--navy),var(--navy-light));
+}
+.nieuws-card-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.nieuws-card:hover .nieuws-card-img img{transform:scale(1.06)}
+.nieuws-card-cat{
+  position:absolute;top:14px;left:14px;
+  background:var(--blue);color:#fff;font-size:11px;font-weight:700;
+  letter-spacing:.5px;text-transform:uppercase;
+  padding:5px 12px;border-radius:100px;
+}
+.nieuws-card-body{padding:24px;flex:1;display:flex;flex-direction:column}
+.nieuws-card-date{font-size:12px;color:var(--text-muted);font-weight:500;margin-bottom:10px}
+.nieuws-card-body h3{font-size:17px;font-weight:700;color:var(--navy);margin-bottom:10px;line-height:1.4;flex:1}
+.nieuws-card-body p{font-size:14px;line-height:1.65;color:#6a7a8a;margin-bottom:18px}
+.nieuws-link{display:inline-flex;align-items:center;gap:6px;color:var(--blue);font-weight:700;font-size:14px;transition:gap .2s;margin-top:auto}
+.nieuws-link:hover{gap:10px}
+.nieuws-link svg{width:14px;height:14px;fill:currentColor}
+
+/* ─── FOOTER ─── */
+footer{background:var(--navy);color:#fff;padding:70px 60px 36px}
+.footer-inner{max-width:1220px;margin:0 auto}
+.footer-top{
+  display:grid;grid-template-columns:2fr 1fr 1fr 1.5fr;gap:50px;
+  padding-bottom:52px;border-bottom:1px solid rgba(255,255,255,.08);
+}
+.footer-logo{display:flex;align-items:center;gap:12px;margin-bottom:18px}
+.footer-logo-mark{width:44px;height:44px;flex-shrink:0}
+.footer-logo-name{font-size:17px;font-weight:800;color:#fff}
+.footer-logo-sub{font-size:10px;color:rgba(255,255,255,.4);font-weight:500;letter-spacing:1.2px;text-transform:uppercase}
+.footer-brand p{font-size:14px;line-height:1.75;color:rgba(255,255,255,.5);margin-bottom:22px}
+.footer-social{display:flex;gap:10px}
+.social-btn{
+  width:38px;height:38px;border-radius:9px;
+  background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);
+  display:flex;align-items:center;justify-content:center;
+  transition:.25s;text-decoration:none;
+}
+.social-btn:hover{background:var(--blue);border-color:var(--blue)}
+.social-btn svg{width:16px;height:16px;fill:rgba(255,255,255,.7)}
+.social-btn:hover svg{fill:#fff}
+.footer-col h4{font-size:13px;font-weight:700;color:#fff;letter-spacing:.5px;text-transform:uppercase;margin-bottom:18px}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:10px}
+.footer-col ul a{font-size:14px;color:rgba(255,255,255,.5);text-decoration:none;transition:.2s;font-weight:500}
+.footer-col ul a:hover{color:#fff;padding-left:4px}
+.footer-contact-items{display:flex;flex-direction:column;gap:12px}
+.fci{display:flex;gap:10px;align-items:flex-start}
+.fci svg{width:15px;height:15px;fill:var(--blue);flex-shrink:0;margin-top:3px}
+.fci span,.fci a{font-size:13px;color:rgba(255,255,255,.55);line-height:1.5;text-decoration:none;transition:.2s;font-weight:500}
+.fci a:hover{color:#fff}
+.footer-kvk{
+  margin-top:16px;padding:14px 16px;
+  background:rgba(255,255,255,.04);border-radius:10px;
+  border:1px solid rgba(255,255,255,.07);
+}
+.footer-kvk p{font-size:11px;color:rgba(255,255,255,.3);line-height:1.8;font-weight:500}
+.footer-bottom{
+  display:flex;align-items:center;justify-content:space-between;
+  padding-top:28px;flex-wrap:wrap;gap:12px;
+}
+.footer-copy{font-size:13px;color:rgba(255,255,255,.3);font-weight:500}
+.footer-links{display:flex;gap:20px}
+.footer-links a{font-size:13px;color:rgba(255,255,255,.3);text-decoration:none;transition:.2s;font-weight:500}
+.footer-links a:hover{color:rgba(255,255,255,.7)}
+.footer-cherry{font-size:12px;color:rgba(255,255,255,.2);font-weight:500}
+
+/* ─── MOBILE NAV ─── */
+.mobile-menu-btn{
+  display:none;flex-direction:column;gap:5px;cursor:pointer;
+  background:none;border:none;padding:8px;
+}
+.mobile-menu-btn span{width:24px;height:2px;background:#fff;border-radius:2px;transition:.3s}
+
+/* ─── RESPONSIVE ─── */
+@media(max-width:1024px){
+  nav,.section,#diensten,#vestigingen,#nieuws,#contact-cta,#service-strip,#merken,#about{padding-left:32px;padding-right:32px}
+  #topbar,footer{padding-left:32px;padding-right:32px}
+  .hero-content{padding:0 40px}
+  .diensten-grid{grid-template-columns:repeat(2,1fr)}
+  .vest-grid{grid-template-columns:repeat(2,1fr)}
+  .nieuws-grid{grid-template-columns:repeat(2,1fr)}
+  .footer-top{grid-template-columns:1fr 1fr}
+  .cta-inner{grid-template-columns:1fr}
+  .about-grid{grid-template-columns:1fr;gap:48px}
+  .about-visual{order:1}
+  .about-text{order:2}
+}
+@media(max-width:768px){
+  nav{padding:0 20px}
+  .nav-links,.nav-right{display:none}
+  .mobile-menu-btn{display:flex}
+  #topbar{padding:8px 20px;flex-direction:column;gap:6px;text-align:center}
+  .topbar-right{display:none}
+  .hero-content{padding:0 24px;max-width:100%}
+  .section{padding:60px 20px}
+  #diensten,#vestigingen,#nieuws,#contact-cta,#merken,#about,#stats,#service-strip{padding:60px 20px}
+  .diensten-grid{grid-template-columns:1fr}
+  .vest-grid{grid-template-columns:1fr}
+  .nieuws-grid{grid-template-columns:1fr}
+  .footer-top{grid-template-columns:1fr;gap:32px}
+  footer{padding:50px 20px 28px}
+  .stats-row{gap:28px}
+  .stat-divider{display:none}
+  .cta-inner{gap:40px}
+  .service-strip-inner{flex-direction:column;text-align:center}
+}
+
+/* ─── SCROLL ANIMATIONS ─── */
+.fade-up{opacity:0;transform:translateY(30px);transition:opacity .65s,transform .65s}
+.fade-up.visible{opacity:1;transform:none}
+</style>
+</head>
+<body>
+
+<!-- ═══ TOP BAR ═══ -->
+<div id="topbar">
+  <div class="topbar-left">
+    <a href="tel:0850402130">
+      <svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+      085-040 21 30
+    </a>
+    <a href="mailto:service@sideriusheftrucks.nl">
+      <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+      service@sideriusheftrucks.nl
+    </a>
+  </div>
+  <div class="topbar-right">Officieel Clark &amp; Hyundai dealer · Sinds 1945</div>
+</div>
+
+<!-- ═══ NAV ═══ -->
+<nav id="main-nav">
+  <a href="#" class="nav-logo">
+    <!-- Siderius logo: blauw octagon met witte S -->
+    <svg class="nav-logo-mark" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="80,10 176,10 246,80 246,176 176,246 80,246 10,176 10,80" fill="#1E9FD9"/>
+      <polygon points="80,10 176,10 246,80 246,176 176,246 80,246 10,176 10,80" fill="url(#shadow)" opacity=".25"/>
+      <defs>
+        <linearGradient id="shadow" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#000" stop-opacity="0"/>
+          <stop offset="100%" stop-color="#000" stop-opacity="1"/>
+        </linearGradient>
+      </defs>
+      <!-- Witte S-vorm -->
+      <rect x="72" y="72" width="112" height="40" rx="4" fill="#fff"/>
+      <rect x="72" y="112" width="112" height="36" rx="4" fill="#1E9FD9"/>
+      <rect x="72" y="144" width="112" height="40" rx="4" fill="#fff"/>
+      <rect x="72" y="72" width="44" height="112" rx="4" fill="#fff"/>
+      <rect x="140" y="72" width="44" height="72" rx="4" fill="#fff"/>
+    </svg>
+    <div class="nav-logo-text">
+      <div class="nav-logo-name">Siderius</div>
+      <div class="nav-logo-sub">Heftrucks</div>
+    </div>
+  </a>
+
+  <ul class="nav-links">
+    <li><a href="#diensten">Producten</a></li>
+    <li><a href="https://sideriusheftrucks.nl/voorraad-interne-transportmiddelen/" target="_blank">Voorraad</a></li>
+    <li><a href="#verhuur">Verhuur</a></li>
+    <li><a href="#service">Service</a></li>
+    <li><a href="#onderdelen">Onderdelen</a></li>
+    <li class="has-drop">
+      <a href="#about">DNA Siderius ▾</a>
+      <div class="dropdown">
+        <a href="https://sideriusheftrucks.nl/vacatures/" target="_blank">Vacatures</a>
+        <a href="https://sideriusheftrucks.nl/nieuws/" target="_blank">Nieuws</a>
+        <a href="https://sideriusheftrucks.nl/sponsoren-pagina/" target="_blank">Sponsoring</a>
+      </div>
+    </li>
+    <li><a href="#contact-cta" class="nav-cta">Contact</a></li>
+  </ul>
+
+  <div class="nav-right">
+    <a href="tel:0850402130" class="nav-phone">
+      <svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+      085-040 21 30
+    </a>
+    <button class="mobile-menu-btn" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ═══ HERO ═══ -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">Officieel Clark &amp; Hyundai dealer</div>
+    <h1 class="hero-title">Uw partner in <em>heftrucks</em> &amp; intern transport</h1>
+    <p class="hero-desc">Al meer dan 80 jaar de betrouwbare keuze voor verkoop, verhuur, service en onderhoud van heftrucks en interne transportmiddelen. Drie vestigingen, overal bereikbaar.</p>
+    <div class="hero-btns">
+      <a href="#diensten" class="btn-blue">
+        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg>
+        Bekijk onze diensten
+      </a>
+      <a href="https://sideriusheftrucks.nl/voorraad-interne-transportmiddelen/" target="_blank" class="btn-outline">Bekijk voorraad</a>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <div class="scroll-dot"></div>
+    scroll
+  </div>
+</section>
+
+<!-- ═══ STATS ═══ -->
+<section id="stats">
+  <div class="stats-row">
+    <div class="stat-item fade-up">
+      <div class="stat-num">1945</div>
+      <div class="stat-lbl">Opgericht</div>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat-item fade-up">
+      <div class="stat-num">80<span class="stat-unit">+</span></div>
+      <div class="stat-lbl">Jaar ervaring</div>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat-item fade-up">
+      <div class="stat-num">20<span class="stat-unit">+</span></div>
+      <div class="stat-lbl">Medewerkers</div>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat-item fade-up">
+      <div class="stat-num">3</div>
+      <div class="stat-lbl">Vestigingen</div>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat-item fade-up">
+      <div class="stat-num">6</div>
+      <div class="stat-lbl">Topmerken</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ DIENSTEN ═══ -->
+<section class="section" id="diensten">
+  <div class="section-inner">
+    <div class="fade-up">
+      <div class="section-tag">Wat wij doen</div>
+      <h2 class="section-heading">Alles voor uw <span>interne transport</span></h2>
+      <p class="section-sub">Van nieuwe heftrucks tot verhuur, onderhoud en onderdelen – Siderius is uw volledige one-stop partner voor intern transport.</p>
+    </div>
+    <div class="diensten-grid">
+
+      <!-- Verkoop -->
+      <a href="https://sideriusheftrucks.nl/heftrucks/" target="_blank" class="dienst-card fade-up" id="verkoop">
+        <div class="dienst-card-img">
+          <img src="https://sideriusheftrucks.nl/wp-content/uploads/2025/12/Siderius-5790-min-scaled-e1766155281238.jpg" alt="Heftrucks verkoop" loading="lazy">
+          <div class="dienst-card-stripe"></div>
+        </div>
+        <div class="dienst-card-body">
+          <h3>Verkoop</h3>
+          <p>Nieuwe en gebruikte heftrucks, reach trucks, orderpickers, reachtrucks, elektrische pallettruck en meer. Clark, Hyundai, Combilift, Linde, Manitou &amp; Merlo.</p>
+          <span class="dienst-link">Meer over verkoop <svg viewBox="0 0 24 24"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg></span>
+        </div>
+      </a>
+
+      <!-- Verhuur -->
+      <a href="https://sideriusheftrucks.nl/verhuur-van-verschillende-merken-heftrucks-en-andere-transportmiddelen/" target="_blank" class="dienst-card fade-up" id="verhuur">
+        <div class="dienst-card-img">
+          <img src="https://sideriusheftrucks.nl/wp-content/uploads/2024/07/Siderius-Leuwaarden-d.d.-22-04-2023-58-of-89-min-scaled.jpg" alt="Verhuur heftrucks" loading="lazy">
+          <div class="dienst-card-stripe"></div>
+        </div>
+        <div class="dienst-card-body">
+          <h3>Verhuur</h3>
+          <p>Flexibele huur van heftrucks, hoogwerkers en intern transport per dag, week of maand. Bereik tot 20 ton, diverse uitvoeringen. Operationeel lease ook mogelijk.</p>
+          <span class="dienst-link">Meer over verhuur <svg viewBox="0 0 24 24"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg></span>
+        </div>
+      </a>
+
+      <!-- Service -->
+      <a href="https://sideriusheftrucks.nl/service-onderhoud-en-reparatie/" target="_blank" class="dienst-card fade-up" id="service">
+        <div class="dienst-card-img">
+          <img src="https://sideriusheftrucks.nl/wp-content/uploads/2024/07/Opening-Siderius62-min-1-scaled.jpg" alt="Service en onderhoud" loading="lazy">
+          <div class="dienst-card-stripe"></div>
+        </div>
+        <div class="dienst-card-body">
+          <h3>Service &amp; Onderhoud</h3>
+          <p>Professionele reparaties, preventief onderhoud en periodieke veiligheidskeuringen. Onze monteurs komen bij u op locatie of u brengt uw machine in bij een van onze vestigingen.</p>
+          <span class="dienst-link">Meer over service <svg viewBox="0 0 24 24"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg></span>
+        </div>
+      </a>
+
+      <!-- Onderdelen -->
+      <a href="https://sideriusheftrucks.nl/alle-interne-transport-onderdelen/" target="_blank" class="dienst-card fade-up" id="onderdelen">
+        <div class="dienst-card-img">
+          <img src="https://sideriusheftrucks.nl/wp-content/uploads/2024/06/image00001-min-scaled.jpeg" alt="Onderdelen" loading="lazy">
+          <div class="dienst-card-stripe"></div>
+        </div>
+        <div class="dienst-card-body">
+          <h3>Onderdelen</h3>
+          <p>Originele onderdelen voor alle merken: printplaten, filters, hydraulische componenten, elektrische onderdelen, banden en slijtdelen. Snelle levering vanuit eigen magazijn.</p>
+          <span class="dienst-link">Bestel onderdelen <svg viewBox="0 0 24 24"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg></span>
+        </div>
+      </a>
+
+      <!-- VA-keur -->
+      <a href="https://sideriusheftrucks.nl/service-onderhoud-en-reparatie/" target="_blank" class="dienst-card fade-up">
+        <div class="dienst-card-img">
+          <img src="https://sideriusheftrucks.nl/wp-content/uploads/2024/07/Veiligheidskeuring-Siderius-Heftrucks.webp" alt="VA-keur veiligheidskeuring" loading="lazy">
+          <div class="dienst-card-stripe"></div>
+        </div>
+        <div class="dienst-card-body">
+          <h3>VA-keur Veiligheidskeuring</h3>
+          <p>VA-keur gecertificeerde periodieke veiligheidskeuringen. Wij zorgen dat uw machines aan alle wettelijke eisen en de machinerichtlijn voldoen. Veiligheid staat voorop.</p>
+          <span class="dienst-link">Plan een keuring <svg viewBox="0 0 24 24"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg></span>
+        </div>
+      </a>
+
+      <!-- Clark dealer -->
+      <a href="https://sideriusheftrucks.nl/clark-heftrucks/" target="_blank" class="dienst-card fade-up">
+        <div class="dienst-card-img">
+          <img src="https://sideriusheftrucks.nl/wp-content/uploads/2024/07/Clark-product-overview-Siderius-Heftrucks-scaled.jpg" alt="Clark heftrucks" loading="lazy">
+          <div class="dienst-card-stripe"></div>
+        </div>
+        <div class="dienst-card-body">
+          <h3>Clark &amp; Hyundai Dealer</h3>
+          <p>Als officieel Clark en Hyundai dealer leveren wij het volledige assortiment met directe toegang tot de nieuwste modellen, fabrieksonderdelen en fabrieksgarantie.</p>
+          <span class="dienst-link">Bekijk merken <svg viewBox="0 0 24 24"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg></span>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SERVICE STRIP ═══ -->
+<div id="service-strip">
+  <div class="service-strip-inner">
+    <div class="service-strip-text">
+      <h3>Heftruck kapot? Wij zijn er snel bij.</h3>
+      <p>Onze servicemonteurs komen bij u op locatie om de downtime van uw machine tot een minimum te beperken. Ook Pickup &amp; Delivery mogelijk.</p>
+    </div>
+    <a href="https://sideriusheftrucks.nl/contact-formulier-service/" target="_blank" class="btn-white">Service inplannen</a>
+  </div>
+</div>
+
+<!-- ═══ ABOUT / DNA ═══ -->
+<section class="section" id="about">
+  <div class="section-inner">
+    <div class="about-grid">
+      <div class="about-visual fade-up">
+        <div class="about-img-main">
+          <img src="https://sideriusheftrucks.nl/wp-content/uploads/2024/07/Opening-Siderius35-min-scaled.jpg" alt="Siderius Heftrucks vestiging Leeuwarden" loading="lazy">
+        </div>
+        <div class="about-badge about-badge-1">🏆 Ondernemer 2025</div>
+        <div class="about-badge about-badge-2">
+          &gt;1.000 bezoekers
+          <small>Opening Leeuwarden 2023</small>
+        </div>
+        <div class="about-facts">
+          <div class="about-fact">
+            <div class="about-fact-num">80+</div>
+            <div class="about-fact-lbl">Jaar familiebedrijf</div>
+          </div>
+          <div class="about-fact">
+            <div class="about-fact-num">3</div>
+            <div class="about-fact-lbl">Vestigingen NL</div>
+          </div>
+          <div class="about-fact">
+            <div class="about-fact-num">20+</div>
+            <div class="about-fact-lbl">Vakspecialisten</div>
+          </div>
+          <div class="about-fact">
+            <div class="about-fact-num">100%</div>
+            <div class="about-fact-lbl">Klantgericht</div>
+          </div>
+        </div>
+      </div>
+      <div class="about-text fade-up">
+        <div class="section-tag">DNA Siderius</div>
+        <h2>Betrouwbaar partner <span>sinds 1945</span></h2>
+        <p>Siderius Heftrucks werd in 1945 opgericht door de broers Pieter en Jarig Siderius in Oudebildzijl, met als missie bij te dragen aan de vooruitgang van de landbouwmechanisatie in Friesland.</p>
+        <p>In de jaren '70 verhuisde het bedrijf naar Berlikum en werd de verkoop van heftrucks toegevoegd. Het groeide uit tot een nationaal bedrijf met vestigingen in Groningen (2010) en Alphen aan den Rijn (2013). In 2023 opende ons nieuwe hoofdkantoor in Leeuwarden zijn deuren – een evenement dat meer dan 1.000 bezoekers trok.</p>
+        <p>Onze kernwaarden: <strong>betrouwbaarheid, eerlijkheid, klantgerichtheid en kwaliteit</strong>. Ze sturen ons dagelijks werk en zijn de basis van onze langdurige klantrelaties.</p>
+        <div class="timeline">
+          <div class="tl-item">
+            <div class="tl-year">1945</div>
+            <div class="tl-dot"></div>
+            <div class="tl-text">Opgericht in Oudebildzijl door Pieter &amp; Jarig Siderius</div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-year">1970s</div>
+            <div class="tl-dot"></div>
+            <div class="tl-text">Verhuizing naar Berlikum, toevoeging heftrucken door Broer Siderius</div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-year">2010</div>
+            <div class="tl-dot"></div>
+            <div class="tl-text">Uitbreiding naar Groningen</div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-year">2013</div>
+            <div class="tl-dot"></div>
+            <div class="tl-text">Opening vestiging Alphen aan den Rijn</div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-year">2023</div>
+            <div class="tl-dot"></div>
+            <div class="tl-text">Nieuw hoofdkantoor Leeuwarden, Brailleweg 10</div>
+          </div>
+        </div>
+        <div class="cert-row">
+          <div class="cert-pill"><div class="dot"></div>VA-keur gecertificeerd</div>
+          <div class="cert-pill"><div class="dot"></div>Erkend leerbedrijf SBB</div>
+          <div class="cert-pill"><div class="dot"></div>Officieel Clark dealer</div>
+          <div class="cert-pill"><div class="dot"></div>Officieel Hyundai dealer</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ MERKEN ═══ -->
+<section id="merken">
+  <div class="merken-inner">
+    <div class="merken-heading fade-up">
+      <p>Onze partners</p>
+      <h2>Topmerken in ons assortiment</h2>
+    </div>
+    <div class="merken-grid">
+      <div class="merk-card">Clark<div class="merk-official">Officieel dealer</div></div>
+      <div class="merk-card">Hyundai<div class="merk-official">Officieel dealer</div></div>
+      <div class="merk-card">Linde</div>
+      <div class="merk-card">Combilift</div>
+      <div class="merk-card">Merlo</div>
+      <div class="merk-card">Manitou</div>
+      <div class="merk-card">Meijer</div>
+      <div class="merk-card">Kalmar</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ VESTIGINGEN ═══ -->
+<section id="vestigingen">
+  <div class="vest-inner">
+    <div class="fade-up">
+      <div class="section-tag">Onze vestigingen</div>
+      <h2 class="section-heading">Altijd <span>dichtbij</span></h2>
+      <p class="section-sub">Met drie vestigingen in Noord-Nederland en het westen van het land zijn wij altijd in de buurt voor service, verhuur of een goed gesprek.</p>
+    </div>
+    <div class="vest-grid">
+
+      <!-- Leeuwarden -->
+      <div class="vest-card fade-up">
+        <div class="vest-card-header">
+          <div class="vest-hq-badge">Hoofdkantoor</div>
+          <h3>Leeuwarden</h3>
+          <p>Nieuw pand geopend in 2023</p>
+        </div>
+        <div class="vest-card-body">
+          <div class="vest-info">
+            <div class="vest-info-row">
+              <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              <span>Brailleweg 10<br><strong>8912 BL Leeuwarden</strong></span>
+            </div>
+            <div class="vest-info-row">
+              <svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+              <span><a href="tel:0850402130" style="color:inherit;text-decoration:none">085-040 21 30</a></span>
+            </div>
+            <div class="vest-info-row">
+              <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"/></svg>
+              <span>Workshop · Magazijn · Kantoor</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Groningen -->
+      <div class="vest-card fade-up">
+        <div class="vest-card-header">
+          <h3>Groningen</h3>
+          <p>Servicemonteurs &amp; werkplaats</p>
+        </div>
+        <div class="vest-card-body">
+          <div class="vest-info">
+            <div class="vest-info-row">
+              <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              <span>Flensburgweg 10A<br><strong>9723 TN Groningen</strong></span>
+            </div>
+            <div class="vest-info-row">
+              <svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+              <span><a href="tel:0850402130" style="color:inherit;text-decoration:none">085-040 21 30</a></span>
+            </div>
+            <div class="vest-info-row">
+              <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"/></svg>
+              <span>Workshop · Servicemonteurs</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Alphen aan den Rijn -->
+      <div class="vest-card fade-up">
+        <div class="vest-card-header">
+          <h3>Alphen a/d Rijn</h3>
+          <p>Volledige werkplaats &amp; kantoor</p>
+        </div>
+        <div class="vest-card-body">
+          <div class="vest-info">
+            <div class="vest-info-row">
+              <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              <span>De Schans 33<br><strong>2408 ZA Alphen aan den Rijn</strong></span>
+            </div>
+            <div class="vest-info-row">
+              <svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+              <span><a href="tel:0850402130" style="color:inherit;text-decoration:none">085-040 21 30</a></span>
+            </div>
+            <div class="vest-info-row">
+              <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"/></svg>
+              <span>Workshop · Servicemonteurs · Kantoor</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══ NIEUWS ═══ -->
+<section id="nieuws">
+  <div class="section-inner">
+    <div class="fade-up">
+      <div class="section-tag">Actueel</div>
+      <h2 class="section-heading">Nieuws &amp; <span>updates</span></h2>
+      <p class="section-sub">Blijf op de hoogte van de laatste ontwikkelingen in de wereld van heftrucks en interne transportmiddelen.</p>
+    </div>
+    <div class="nieuws-grid">
+
+      <a href="https://sideriusheftrucks.nl/de-het-leeuwarder-ondernemersprijs-2025/" target="_blank" class="nieuws-card fade-up">
+        <div class="nieuws-card-img">
+          <img src="https://sideriusheftrucks.nl/wp-content/uploads/2025/03/De-HET-ondernemersprijs-2025-min-scaled.jpg" alt="Ondernemersprijs 2025" loading="lazy">
+          <div class="nieuws-card-cat">Nieuws</div>
+        </div>
+        <div class="nieuws-card-body">
+          <div class="nieuws-card-date">2025</div>
+          <h3>De HET | Leeuwarder Ondernemersprijs 2025</h3>
+          <p>Siderius Heftrucks genomineerd voor de Leeuwarder Ondernemersprijs 2025. Een mooie erkenning voor ons team en onze klanten.</p>
+          <span class="nieuws-link">Lees meer <svg viewBox="0 0 24 24"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg></span>
+        </div>
+      </a>
+
+      <a href="https://sideriusheftrucks.nl/merlo-demodag-20-09-2024/" target="_blank" class="nieuws-card fade-up">
+        <div class="nieuws-card-img">
+          <img src="https://sideriusheftrucks.nl/wp-content/uploads/2025/12/Groepsfoto.jpg" alt="Merlo demodag" loading="lazy">
+          <div class="nieuws-card-cat">Event</div>
+        </div>
+        <div class="nieuws-card-body">
+          <div class="nieuws-card-date">September 2024</div>
+          <h3>Merlo Demodag in Leeuwarden</h3>
+          <p>Op 20 september organiseerden wij een Merlo demodag in Leeuwarden. Win een fabrieksbezoek en ontdek de nieuwste Merlo machines.</p>
+          <span class="nieuws-link">Lees meer <svg viewBox="0 0 24 24"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg></span>
+        </div>
+      </a>
+
+      <a href="https://sideriusheftrucks.nl/blog-heftruck-kopen/" target="_blank" class="nieuws-card fade-up">
+        <div class="nieuws-card-img">
+          <img src="https://sideriusheftrucks.nl/wp-content/uploads/2024/07/Siderius-Leuwaarden-d.d.-22-04-2023-78-of-89-min-scaled.jpg" alt="Heftruck kopen of huren" loading="lazy">
+          <div class="nieuws-card-cat">Blog</div>
+        </div>
+        <div class="nieuws-card-body">
+          <div class="nieuws-card-date">Kennisbank</div>
+          <h3>Heftruck kopen of huren: wat is slim bij uw project?</h3>
+          <p>Een praktische gids over de afweging tussen kopen, huren of leasen van heftrucks voor uw specifieke situatie en project.</p>
+          <span class="nieuws-link">Lees meer <svg viewBox="0 0 24 24"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg></span>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CONTACT CTA ═══ -->
+<section id="contact-cta">
+  <div class="cta-inner">
+    <div class="cta-left fade-up">
+      <h2>Klaar om samen <span>verder te rijden?</span></h2>
+      <p>Neem contact op met onze specialisten voor advies op maat. Of het nu gaat om een nieuwe heftruck, verhuur of service – wij helpen u verder.</p>
+      <div class="cta-contacts">
+        <div class="cta-contact-row">
+          <div class="cta-contact-icon">
+            <svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+          </div>
+          <div class="cta-contact-info">
+            <span class="cta-contact-label">Telefoon</span>
+            <a href="tel:0850402130" class="cta-contact-val">085-040 21 30</a>
+          </div>
+        </div>
+        <div class="cta-contact-row">
+          <div class="cta-contact-icon">
+            <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          </div>
+          <div class="cta-contact-info">
+            <span class="cta-contact-label">E-mail</span>
+            <a href="mailto:service@sideriusheftrucks.nl" class="cta-contact-val">service@sideriusheftrucks.nl</a>
+          </div>
+        </div>
+      </div>
+      <a href="https://sideriusheftrucks.nl/contact/" target="_blank" class="btn-blue">Ga naar contactpagina</a>
+    </div>
+    <div class="cta-right fade-up">
+      <div class="contact-dept">
+        <div class="contact-dept-name">Verkoop</div>
+        <div class="contact-dept-person">Jan Bart Suierveld &amp; Harold Enting</div>
+        <div class="contact-dept-links">
+          <a href="tel:+31645361647">06 45 36 16 47</a>
+          <a href="mailto:verkoop@sideriusheftrucks.nl">verkoop@sideriusheftrucks.nl</a>
+        </div>
+      </div>
+      <div class="contact-dept">
+        <div class="contact-dept-name">Verhuur</div>
+        <div class="contact-dept-person">Jan Yke</div>
+        <div class="contact-dept-links">
+          <a href="tel:+31653329012">06 53 32 90 12</a>
+          <a href="mailto:verhuur@sideriusheftrucks.nl">verhuur@sideriusheftrucks.nl</a>
+        </div>
+      </div>
+      <div class="contact-dept">
+        <div class="contact-dept-name">Service &amp; Onderhoud</div>
+        <div class="contact-dept-person">Servicedienst</div>
+        <div class="contact-dept-links">
+          <a href="tel:0850402130">085-040 21 30</a>
+          <a href="mailto:service@sideriusheftrucks.nl">service@sideriusheftrucks.nl</a>
+        </div>
+      </div>
+      <div class="contact-dept">
+        <div class="contact-dept-name">Onderdelen &amp; Magazijn</div>
+        <div class="contact-dept-person">Magazijn Siderius</div>
+        <div class="contact-dept-links">
+          <a href="tel:0850402130">085-040 21 30</a>
+          <a href="mailto:magazijn@sideriusheftrucks.nl">magazijn@sideriusheftrucks.nl</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <svg class="footer-logo-mark" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+            <polygon points="80,10 176,10 246,80 246,176 176,246 80,246 10,176 10,80" fill="#1E9FD9"/>
+            <rect x="72" y="72" width="112" height="40" rx="4" fill="#fff"/>
+            <rect x="72" y="112" width="112" height="36" rx="4" fill="#1E9FD9"/>
+            <rect x="72" y="144" width="112" height="40" rx="4" fill="#fff"/>
+            <rect x="72" y="72" width="44" height="112" rx="4" fill="#fff"/>
+            <rect x="140" y="72" width="44" height="72" rx="4" fill="#fff"/>
+          </svg>
+          <div>
+            <div class="footer-logo-name">Siderius Heftrucks</div>
+            <div class="footer-logo-sub">Sinds 1945</div>
+          </div>
+        </div>
+        <p>Uw betrouwbare partner voor heftrucks en interne transportmiddelen. Verkoop, verhuur, service en onderdelen vanuit drie vestigingen door heel Nederland.</p>
+        <div class="footer-social">
+          <a href="https://facebook.com" target="_blank" class="social-btn" aria-label="Facebook">
+            <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </a>
+          <a href="https://twitter.com" target="_blank" class="social-btn" aria-label="Twitter/X">
+            <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+          <a href="https://linkedin.com" target="_blank" class="social-btn" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Ontdekken</h4>
+        <ul>
+          <li><a href="https://sideriusheftrucks.nl/heftrucks/" target="_blank">Producten</a></li>
+          <li><a href="https://sideriusheftrucks.nl/voorraad-interne-transportmiddelen/" target="_blank">Voorraad</a></li>
+          <li><a href="https://sideriusheftrucks.nl/verhuur-van-verschillende-merken-heftrucks-en-andere-transportmiddelen/" target="_blank">Verhuur</a></li>
+          <li><a href="https://sideriusheftrucks.nl/service-onderhoud-en-reparatie/" target="_blank">Service</a></li>
+          <li><a href="https://sideriusheftrucks.nl/alle-interne-transport-onderdelen/" target="_blank">Onderdelen</a></li>
+          <li><a href="https://sideriusheftrucks.nl/vacatures/" target="_blank">Vacatures</a></li>
+          <li><a href="https://sideriusheftrucks.nl/nieuws/" target="_blank">Nieuws</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Merken</h4>
+        <ul>
+          <li><a href="https://sideriusheftrucks.nl/clark-heftrucks/" target="_blank">Clark</a></li>
+          <li><a href="https://sideriusheftrucks.nl/hyundai/" target="_blank">Hyundai</a></li>
+          <li><a href="#merken">Linde</a></li>
+          <li><a href="#merken">Combilift</a></li>
+          <li><a href="#merken">Merlo</a></li>
+          <li><a href="#merken">Manitou</a></li>
+          <li><a href="#merken">Meijer</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <div class="footer-contact-items">
+          <div class="fci">
+            <svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+            <a href="tel:0850402130" class="fci">085-040 21 30</a>
+          </div>
+          <div class="fci">
+            <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            <a href="mailto:service@sideriusheftrucks.nl">service@sideriusheftrucks.nl</a>
+          </div>
+          <div class="fci">
+            <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            <span>Brailleweg 10, Leeuwarden<br>Flensburgweg 10A, Groningen<br>De Schans 33, Alphen a/d Rijn</span>
+          </div>
+        </div>
+        <div class="footer-kvk">
+          <p>KvK: 01062011<br>BTW: NL800155920B01<br>IBAN: NL08ABNA0484331310<br>BIC: ABNANL2A</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2026 Siderius Heftrucks BV. Alle rechten voorbehouden.</div>
+      <div class="footer-links">
+        <a href="#">Privacybeleid</a>
+        <a href="#">Algemene voorwaarden</a>
+      </div>
+      <div class="footer-cherry">Webdesign: Cherry</div>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Scroll animations
+const obs = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('visible');
+      obs.unobserve(e.target);
+    }
+  });
+}, {threshold: 0.12});
+document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
+
+// Stagger children of grids
+document.querySelectorAll('.diensten-grid, .vest-grid, .nieuws-grid').forEach(grid => {
+  Array.from(grid.children).forEach((child, i) => {
+    child.style.transitionDelay = (i * 0.1) + 's';
+  });
+});
+
+// Smooth number counter for stats
+function animateNum(el, target, suffix) {
+  let start = 0;
+  const step = Math.ceil(target / 40);
+  const timer = setInterval(() => {
+    start = Math.min(start + step, target);
+    el.textContent = start + (suffix || '');
+    if (start >= target) clearInterval(timer);
+  }, 35);
+}
+
+const statsObs = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      statsObs.unobserve(e.target);
+      const nums = e.target.querySelectorAll('.stat-num');
+      nums.forEach(n => {
+        const text = n.textContent;
+        const val = parseInt(text);
+        if (!isNaN(val)) animateNum(n, val, text.replace(/[0-9]/g,''));
+      });
+    }
+  });
+}, {threshold: 0.3});
+const statsEl = document.getElementById('stats');
+if (statsEl) statsObs.observe(statsEl);
+
+// Nav active on scroll
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('.nav-links a');
+window.addEventListener('scroll', () => {
+  let current = '';
+  sections.forEach(s => {
+    if (window.scrollY >= s.offsetTop - 120) current = s.id;
+  });
+  navLinks.forEach(a => {
+    a.style.color = a.getAttribute('href') === '#' + current
+      ? '#fff' : '';
+  });
+}, {passive:true});
+</script>
+</body>
+</html>
